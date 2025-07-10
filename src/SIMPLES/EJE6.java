@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class EJE6 {
     public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+
+        int opcion;
+        do {
+
 
             System.out.println("MENÚ DE OPERACIONES");
             System.out.println("1. Sumar");
@@ -12,7 +16,7 @@ public class EJE6 {
             System.out.println("3. Multiplicar");
             System.out.println("4. Dividir");
             System.out.print("Elige una opción (1-4): ");
-            int opcion = sc.nextInt();
+            opcion = sc.nextInt();
 
             System.out.print("Ingresa el primer número: ");
             float num1 = sc.nextFloat();
@@ -22,7 +26,7 @@ public class EJE6 {
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Resultado: "+ (num1 + num2));
+                    System.out.println("Resultado: " + (num1 + num2));
                     break;
                 case 2:
                     System.out.println("Resultado: " + (num1 - num2));
@@ -37,10 +41,15 @@ public class EJE6 {
                         System.out.println("Resultado: " + (num1 / num2));
                     }
                     break;
+                case 5:
+                    System.out.println("Gracias por usar la calculadora. ¡Hasta luego!");
+                    break;
                 default:
-                    System.out.println("Opción no válida.");
-            }
-        }
-}
+                    System.out.println("Opción no válida. Intente de nuevo.");
 
+
+            }
+        } while (opcion != 5);
+    }
+}
 
